@@ -1,13 +1,14 @@
 package parsing.lexer
 
 import org.scalatest.{FlatSpec, Matchers}
+import parsing.UnitSpec
 import parsing.lexer.Lexer._
 import parsing.lexer.ListLexer._
 
 /**
   * Created by hongdi.ren.
   */
-class ListLexerSpec extends FlatSpec with Matchers {
+class ListLexerSpec extends UnitSpec {
 
   "ListLexer" should "nextToken" in {
     val input = "[a, b ]"
@@ -18,6 +19,7 @@ class ListLexerSpec extends FlatSpec with Matchers {
     lexer.nextToken() should be(Token(COMMA, ","))
     lexer.nextToken() should be(Token(NAME, "b"))
     lexer.nextToken() should be(Token(RBRACK, "]"))
+    lexer.nextToken() should be(Token(EOF_TYPE, "<EOF>"))
     lexer.nextToken() should be(Token(EOF_TYPE, "<EOF>"))
   }
 
