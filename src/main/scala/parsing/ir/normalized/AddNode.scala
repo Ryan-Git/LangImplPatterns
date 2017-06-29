@@ -10,6 +10,6 @@ case class AddNode(left: ExprNode, plus: Token, right: ExprNode) extends ExprNod
   addChild(left)
   addChild(right)
 
-  override val evalType: EvalType = Integer
+  override val evalType: EvalType = IntegerType
 
 }

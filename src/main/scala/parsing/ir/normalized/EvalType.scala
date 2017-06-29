@@ -9,6 +9,6 @@ sealed trait EvalType {
 
 object Invalid extends EvalType
 
-object Integer extends EvalType
+object IntegerType extends EvalType
 
 object Vector extends EvalType
