@@ -11,4 +11,6 @@ object Invalid extends EvalType
 
 object IntegerType extends EvalType
 
+object StringType extends EvalType
+
 object Vector extends EvalType
