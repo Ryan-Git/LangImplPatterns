@@ -9,5 +9,8 @@ lazy val root = (project in file(".")).
     )),
     name := "LangImplPatterns",
     libraryDependencies += scalaTest % Test,
-    libraryDependencies += "org.antlr" % "antlr4-runtime" % "4.7"
+    libraryDependencies += "org.antlr" % "antlr4-runtime" % "4.7",
+    libraryDependencies += "org.antlr" % "antlr-runtime" % "3.2",
+    libraryDependencies += "org.antlr" % "antlr" % "3.2",
+    libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.6"
   )
